@@ -1,0 +1,214 @@
+#page-container {
+	width: 726px;
+	margin: auto;
+	
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, Verdana, Sans-serif;
+	font-size: 12px;
+	#color: #666666;
+	#color: black;
+	background: #424242;
+	
+
+}
+
+#main-nav {
+	background: white;
+	height: 50px;
+	padding: 25px 0 0 0;
+}
+
+ul#topnav {
+	margin: 0; padding: 0;
+	float: left;
+	width: 726px;
+	list-style: none;
+	position: relative; /*--Set relative positioning on the unordered list itself - not on the list item--*/
+	font-size: 1.2em;
+	#background: url(topnav_stretch.gif) repeat-x;
+	background: black;
+}
+ul#topnav li {
+	float: left;
+	margin: 0; padding: 0;
+	border-right: 1px solid #555; /*--Divider for each parent level links--*/
+}
+ul#topnav li a {
+	padding: 10px 15px;
+	display: block;
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+ul.bookmarks .edit{
+	font-size: 70%;
+}
+
+
+#header {
+	#background: blue;
+	height: 100px;
+	background: url(sb.png);
+	margin: 0 auto;
+	
+	color: white;
+	
+
+}
+
+
+
+.container {
+  position: relative;
+  height: 100px;
+}
+
+.overlay {
+  background-color: #000;
+  position: absolute;
+  width: 384px;
+  height: 40px;
+  top: 32px;
+  left: 8px;
+  opacity: 0.6;
+  filter:alpha(opacity=60);
+}
+
+.text {
+  position: absolute;
+  width: 384px;
+  top: 40px;
+  left: 8px;
+  color: #fff;
+  text-align: center;
+  font-size:200%
+}
+input {
+display: block;
+}
+
+
+
+#content {
+	margin-right: 0px;
+	background: #FFFFFF;
+	padding: 25px;
+	line-height: 18px;
+}
+
+#content p {
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+    padding-right: 20px;
+	
+
+}
+
+
+
+#footer {
+    color: #FFFFFF;
+    height: 33px;
+    margin: 0 auto;
+    padding: 0;
+    width: 726px;
+}
+
+#footer p {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: smaller;
+    margin: 0;
+    padding: 13px 20px 0;
+    text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+
+
+/*a*/
+
+#content-bgbtm {
+    padding: 20px 10px;
+}
+
+#content-bgbtm .heading {
+    font-size: 2em;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+
+.post h1 {
+    font-weight: normal;
+}
+.post a:hover {
+	
+    color: #000000;*
+}
+.post .title {
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0 4px 0;
+    
+}
+.post .title a {
+    border-bottom: medium none;
+    color: #0000FF;
+    text-decoration: none;
+}
+.post .title a:hover {
+	color: #000000;
+    
+}
+.post .title .vote {
+    font-size: 8pt;
+}
+.post .byline {
+    margin: -10px 20px 20px 0;
+   
+}
+
+.post .byline .username {
+	 text-decoration: none;
+	
+}
+.entry {
+    padding: 0 0;
+}
+
+
+.links {
+    font-weight: bold;
+    padding: 4px 0;
+    text-align: right;
+}
+.links a {
+    border: medium none;
+    text-decoration: none;
+}
+.links a:hover {
+}
+
+h1, h2, h3 {
+    color: #FFFFFF;
+    margin-top: 0;
+}
+h1 {
+    font-size: 1.6em;
+    font-weight: normal;
+}

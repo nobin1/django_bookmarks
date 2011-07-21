@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load disqus_tags %}
+{% block title %}Bookmark:
+{{ shared_bookmark.bookmark.title }}{% endblock %}
+{% block head %}
+<a href="/vote/?id={{ shared_bookmark.id }}"
+class="vote">[+]</a>
+<a href="{{ shared_bookmark.bookmark.link.url }}"
+class="title">
+{{ shared_bookmark.bookmark.title }}</a>
+{% endblock %}
+{% block content %}
+Posted By:
+<a href="/user/{{ shared_bookmark.bookmark.user.username }}/"
+class="username">
+{{ shared_bookmark.bookmark.user.username }}</a> |
+<span class="vote-count">Votes: {{ shared_bookmark.votes }}</span>
+
+<!--DISQUS-->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://localdevelopment.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=localdevelopment">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+{% endblock %}
+<a href="{{ object.get_absolute_url }}#disqus_thread">View Comments</a>
+{% disqus_num_replies %}
+{% disqus_show_comments %}
+
+
+<script type="text/javascript">
+var disqus_shortname = 'localdevelopment';
+(function () {
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'http://disqus.com/forums/localdevelopment/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+

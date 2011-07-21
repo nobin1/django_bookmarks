@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}User Update{% endblock %}
+{% block head %}User Update{% endblock %}
+{% block content %}
+<form method="post" action=".">
+{{ form.as_p }}
+<input type="submit" value="Update" />
+</form>
+{% endblock %}

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="Nabin Nepal" />
+
+	<link rel=stylesheet href="/static/style.css" type="text/css" />
+	<script src="/static/jquery.js" type="text/javascript" charset="utf-8"></script>
+	{% block external %}
+	{% endblock %}
+	<script src="/static/script.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="/static/atooltip.jquery.js"></script>
+
+</head>
+
+
+<body>
+
+<div id="page-container">
+		
+	<div id="main-nav">
+	<ul id="topnav">
+		<li><a href="/">home</a></li>
+		<li><a href="/popular/">popular</a></li>
+		{% if user.is_authenticated %}
+			<!--<div class="authenticate">-->
+			<li><a href="/save/">submit</a></li>
+			 <li><a href="/search/">search</a></li>
+			<li><a href="/user/{{ user.username }}/">
+			{{ user.username }}</a></li>
+			<li><a href="/logout/">logout</a></li>
+			
+		{% else %}
+			<!--<div class="no_authenticate">-->
+			<li><a href="/login/">login</a></li>
+			<li><a href="/register/">register</a></li>
+			
+	{% endif %}
+	</ul>	
+	</div><!--end of main nav-->		
+		
+	<div id="header">	
+			<div class="container">
+			   <img src="image.png" />
+			   <div class="overlay">&nbsp;</div>
+			   <div class="text"> The Social Bookmarks </div>
+			</div>			
+
+	</div><!--end of header-->
+	
+	<div id="content">
+		<h1>{% block head %}{% endblock %}</h1>
+		{% block content %}{% endblock %}
+	</div><!--end of content-->
+
+	<div id="footer">
+		© NN
+	</div><!--end of header-->
+	
+</div><!--end of page-container-->
+
+</body>
+</html>

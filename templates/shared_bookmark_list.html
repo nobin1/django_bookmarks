@@ -1,0 +1,33 @@
+
+{% if shared_bookmarks %}
+
+{% for shared_bookmark in shared_bookmarks %}
+
+	
+
+<div class="post">
+
+ <h1 class="title">
+ <a href="/vote/?id={{ shared_bookmark.id }}"class="vote" title="Vote this bookmark">[+]</a>&nbsp;&nbsp;<a href="{{ shared_bookmark.bookmark.link.url }}">{{ shared_bookmark.bookmark.title }}</a>	 	
+ </h1>
+<p class="byline"><small>Posted By:<a href="/user/{{ shared_bookmark.bookmark.user.username }}/"class="username">{{ shared_bookmark.bookmark.user.username }}</a></small></p>
+ 
+ <div class="entry">
+                <p class="links"><span class="vote-count">Votes:
+{{ shared_bookmark.votes }}</span> | <a href="/bookmark/{{ shared_bookmark.id }}/">Comments</a></p>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+{% endfor %}
+
+{% else %}
+<p>No bookmarks found.</p>
+{% endif %}
